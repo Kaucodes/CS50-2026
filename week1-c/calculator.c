@@ -1,18 +1,21 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    long dollars = 1;
-    while (true)
+    int x, y;
+
+    printf("What's x? ");
+    scanf("%d", &x);
+
+    printf("What's y? ");
+    scanf("%d", &y);
+
+    if (y == 0)
     {
-        char c = get_char("Here's $%li. Double it and give it to the next person.", dollars) if (c == 'y')
-        {
-            dollars *= 2;
-        }
-        else
-        {
-            break;
-        }
+        printf("Error: division by zero is not allowed.\n");
+        return 1;
     }
+
+    printf("%f\n", (double)x / y);
+    return 0;
 }
